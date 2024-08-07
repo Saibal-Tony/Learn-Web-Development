@@ -20,36 +20,46 @@
             }
             .box1{
                 background-color: blueviolet;   
-                position: relative; /* by default static */
-                z-index: 1; /* setting the priority no. */             
+                /* position: relative; by default static */
+                /* z-index: 1; setting the priority no. */
+                /* position: absolute; checks if there is something before it which decides the position , if not the the last/default position is the HTML */
+                position: sticky; /* it stays on the top and doesn't move  */
+                /* difference between sticky and fixed is that sticky is fixed until you cross it & sticky stays always on the screen */
+                top: 10px;
+                left: 20px ;
             }
             .box2{
                 background-color: yellow;
-                position: relative; /* now I can add properties to this now */
+                /* position: relative; now I can add properties to this now */
                 top: 25px;
                 left: 100px;
                 /* bottom: 100px; --> any one take effect , top/bottom  */
             }
             .box3{
                 background-color: aqua;
+                position: fixed; /* which doesn't change the position after scroll */
+                left: 50vw;
             }
             .box4{
                 background-color: chocolate;
             }
+            .parent{
+                padding: 50px;
+                margin: 34px;
+                border: 2px solid purple;
+            }
         </style>
     </head>
     <body>
-        <div class="box box1">
-
-        </div>
-        <div class="box box2">
-
-        </div>
-        <div class="box box3">
-
-        </div>
-        <div class="box box4">
-
+        <div class="parent">
+            <div class="box box1">
+            </div>
+            <div class="box box2">
+            </div>
+            <div class="box box3">
+            </div>
+            <div class="box box4">
+            </div>
         </div>
     </body>
 </html>
