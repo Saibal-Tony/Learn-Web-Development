@@ -7,21 +7,34 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
+            /* Declaring  a varibale (This is a global varibale)*/
+            :root{
+                --color: blue;
+                --seccolor: rgb(174,174,222);
+                --defpad: 23px; /* default padding */
+            }
             *{
                 margin: 0;
                 padding: 0;
             }
-            .nav{
-                background-color: rgb(162, 0, 255);
+            .nav{              /* declaring color of block using var() */
+                background-color: var(--color);
             }
             ul{
                 display: flex; /* makes the items in one line */
             }
             ul li{
                 list-style: none;
+                padding: var(--defpad);
+                opacity: 0.3;
+            }
+            ul li:first-child{
+                /* Local varibale */
+                --color: rgb(226, 30, 30); /* this one will override the global varibale */
+                background-color: var(--color , blue); /* this is a fall back varibale , if the previous one is not present then put that color */
             }
             .container{
-                background-color: rgb(191, 109, 239);
+                background-color: var(--seccolor);
             }
         </style>
     </head>
