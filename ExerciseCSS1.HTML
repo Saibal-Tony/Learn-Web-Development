@@ -3,55 +3,82 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>CSS card Design</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
+            @import url('https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&family=Playwrite+ES:wght@100..400&family=Playwrite+US+Trad:wght@100..400&display=swap');
             *{
-                margin: 0px;
-                border: 0px;
-                background-color:blanchedalmond ;
+                margin: 0;
+                padding: 0;
             }
-            .parent{
-                height: 1080px;
-                width: 70vw;
-                margin: 100px;
-                padding: auto;
-                border: 2px solid black ;
-                position: absolute;
-                z-index: 1;
+            body{
+                background-color: gray;
+                padding: 45px;
             }
-            .pic{
-                height: 40vh;
-                width: 65vw;
-                position: absolute;
-                z-index: 2;
-                display: flex;
-                justify-content: center;
-                top: 20px;
+            .card{
+                height: 344px;
+                width: 194px;
+                background-color: white;
+                border-radius: 7px;
             }
-            .p1{
-                display: inline;
-                position: absolute;
-                z-index: 3;
-                border: 2px solid black;
+            .image{
+                padding: 7px;
             }
-            .p2{
-                display: inline;
-                position: absolute;
-                z-index: 4;
-                border: 2px solid black;
+            .image img{
+                border-radius: 7px;
+            }
+            .capsule{
+                padding: 0 28px 0 14px;
+            }
+            .capsule span{
+                padding: 1px 6px;
+                margin: 2px;
+                border: 1px solid black;
+                border-radius: 7px;
+            }
+            .content{
+                padding: 5px 13px;
+                font-family: 'poppins';
+            }
+            .content h3{
+                margin-top: 3px;
+            }
+            .content p{
+                font-size: 15px;
+                color: grey;
+            }
+            .button{
+                text-align: center;
+            }
+            .button button{
+                padding: 3px;
+                border-radius: 7px;
+                background-color: rgb(248, 172, 248);
+                color: purple;
+                border: 1px solid white;
+            }
+            .button button:hover{
+                background-color: white;
+                color: rgb(202, 13, 19);
             }
         </style>
     </head>
     <body>
-        <div class="parent">
-            <div class="pic">
-                <img src="night.jpeg">
+        <div class="card">
+            <div class="image">
+                <img width="180px" height="130px" src="night.jpeg" alt="">
             </div>
-            <div class="box1">
-                <p class="p1">Nature</p>
-                <p class="p2">Lighthouse</p>
+            <div class="capsule">
+                <span>Night</span>
+                <span>Owl</span>
+            </div>
+            <div class="content">
+                <h3>Beautiful Night</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis culpa maxime fugit, nihil quas ab sed minus delectus suscipit assumenda.</p>
+            </div>
+            <div class="button">
+                <button>Submit</button>
             </div>
         </div>
     </body>
