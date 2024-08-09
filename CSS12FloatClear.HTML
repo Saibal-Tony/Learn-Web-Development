@@ -7,8 +7,18 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
+            .cards{
+                border: 2px solid black;
+                display: flow-root; /* making all the cintent fit in the box */
+            }
             img{
-                float: left;
+                float: left; /* make the block move to left */
+            }
+            .card{
+                border: 2px solid red;
+            }
+            .card:nth-child(3){
+                clear: left;
             }
         </style>
     </head>
@@ -17,7 +27,7 @@
             <img width="230" src="https://m.media-amazon.com/images/S/pv-target-images/3597bf3b07286124f13d5fa061b1af1aaa4f748bd6590ddb025e1e5f8d3d4a56.jpg" alt="">
             <div class="card">
                 Card 1</div>
-            <div class="card">Card 2</div>
+            <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, impedit. Fugiat sint iste quo hic eius doloribus aut tempore dolorem molestiae atque aliquam libero, maiores modi dicta accusamus saepe placeat eos mollitia odio.</div>
             <div class="card">Card 3</div>
         </div>
     </body>
